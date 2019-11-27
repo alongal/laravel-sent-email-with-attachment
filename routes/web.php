@@ -14,7 +14,7 @@
 Route::get('/', function () {
 
     \Illuminate\Support\Facades\Mail
-        ::to('newuser@example.com')
+        ::to('alon@stampme.com')
         ->send(new \App\Mail\MailtrapExample());
 
     return view('welcome');

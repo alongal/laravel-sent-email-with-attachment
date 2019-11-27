@@ -28,12 +28,14 @@ class MailtrapExample extends Mailable
      */
     public function build()
     {
-        return $this->from('mail@example.com', 'Mailtrap')
+        return $this->from('atk@galalon.me', 'Alon The King!')
             ->subject('Mailtrap Confirmation')
             ->view('emails.mailtrap')
             ->with([
                 'name' => 'New Mailtrap User',
-                'link' => 'https://mailtrap.io/inboxes'
-            ]);
+                'link' => 'https://mailtrap.io/inboxes',
+                'pathToImage' => 'https://receiptsanalyser.loyaltyplatform.net/storage/receipts/atk.jpg',
+            ])
+            ->attach('https://receiptsanalyser.loyaltyplatform.net/storage/receipts/atk.jpg');
     }
 }
