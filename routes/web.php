@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
+
+    \Illuminate\Support\Facades\Mail
+        ::to('newuser@example.com')
+        ->send(new \App\Mail\MailtrapExample());
+
     return view('welcome');
 });
